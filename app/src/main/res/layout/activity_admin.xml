@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.362" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextHito"
         android:layout_width="152dp"
         android:layout_height="27dp"
         android:ems="10"
@@ -105,10 +105,10 @@
         app:layout_constraintVertical_bias="0.359" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Agregar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
