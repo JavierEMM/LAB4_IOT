@@ -20,6 +20,10 @@
             android:name=".Activity_UserOptions"
             android:exported="false" />
         <activity
+            android:name=".AdminActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
