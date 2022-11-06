@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "84578766913",
+    "firebase_url": "https://lab4iot-14195-default-rtdb.firebaseio.com",
     "project_id": "lab4iot-14195",
     "storage_bucket": "lab4iot-14195.appspot.com"
   },
@@ -13,6 +14,22 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "84578766913-hg20ofsi4eccs5u41dso7hc54u6arfc0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab4_iot",
+            "certificate_hash": "086b671d7ee57b1b749449e62b1a11189e3a99ee"
+          }
+        },
+        {
+          "client_id": "84578766913-mm6anil57lmq3uoviocc8lnj0b75li8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab4_iot",
+            "certificate_hash": "bf5f550fa05e7d2c0bf7bc2a3596d60385666621"
+          }
+        },
         {
           "client_id": "84578766913-0mmmce2kalhm5oknu5643cpg6gaudep8.apps.googleusercontent.com",
           "client_type": 3
