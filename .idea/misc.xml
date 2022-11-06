@@ -3,11 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Labtel/AndroidStudioProjects/LAB4_IOT/app/src/main/res/drawable/background1.xml" value="0.2625" />
-        <entry key="..\:/Users/Labtel/AndroidStudioProjects/LAB4_IOT/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.275" />
-        <entry key="..\:/Users/Labtel/AndroidStudioProjects/LAB4_IOT/app/src/main/res/layout/activity_user_alineacion.xml" value="0.371875" />
-        <entry key="..\:/Users/Labtel/AndroidStudioProjects/LAB4_IOT/app/src/main/res/layout/activity_user_options.xml" value="0.371875" />
-        <entry key="..\:/Users/Labtel/AndroidStudioProjects/LAB4_IOT/app/src/main/res/layout/activity_admin.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/LAB4_IOT/app/src/main/res/layout/activity_firebase_layout.xml" value="0.1" />
       </map>
     </option>
   </component>
