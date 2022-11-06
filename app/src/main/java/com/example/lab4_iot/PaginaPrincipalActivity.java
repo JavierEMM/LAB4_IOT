@@ -31,7 +31,7 @@ public class PaginaPrincipalActivity extends AppCompatActivity {
                     .setAvailableProviders(Arrays.asList(
                             new AuthUI.IdpConfig.EmailBuilder().build(),
                             new AuthUI.IdpConfig.GoogleBuilder().build()
-                    )).build();
+                    )).setIsSmartLockEnabled(false).build();
             signInLauncher.launch(signInIntent);
         });
     }
