@@ -98,8 +98,13 @@
         android:id="@+id/spinnerNombre"
         android:layout_width="149dp"
         android:layout_height="28dp"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="137dp" />
+        android:layout_marginStart="204dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
 
     <Spinner
         android:id="@+id/spinnerApellido"
