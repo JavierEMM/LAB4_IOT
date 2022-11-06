@@ -31,7 +31,7 @@
         <activity
             android:name=".AdminActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".PaginaPrincipalActivity" />
         <activity
             android:name=".PaginaPrincipalActivity"
             android:exported="true">
