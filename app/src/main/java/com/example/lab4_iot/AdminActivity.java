@@ -3,6 +3,7 @@ package com.example.lab4_iot;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +27,6 @@ public class AdminActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     ArrayList<String> listaNombres;
     ArrayList<String> listaApellidos;
-    ArrayList<String> listaEquipos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,17 +80,35 @@ public class AdminActivity extends AppCompatActivity {
         Spinner spinnerApellido = findViewById(R.id.spinnerApellido);
         spinnerApellido.setAdapter(adapter2);
 
-
         Button button = findViewById(R.id.btnAdmin);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                Spinner spinnerEquipo = findViewById(R.id.spinnerEquipo);
+                String equipoStr = spinnerEquipo.getSelectedItem().toString();
+
+                DatabaseReference ref = firebaseDatabase.getReference().child(equipoStr);
+
+                Spinner spinnerNombre = findViewById(R.id.spinnerNombre);
+                String nombreStr = spinnerNombre.getSelectedItem().toString();
+
+                Spinner spinnerApellido = findViewById(R.id.spinnerApellido);
+                String apellidoStr = spinnerApellido.getSelectedItem().toString();
+
+                EditText editTextHito = findViewById(R.id.editTextHito);
+                String hitoStr = editTextHito.getText().toString();
+
+                Hito hito = new Hito();
+                hito.setNombre(nombreStr);
+                hito.setApellido(apellidoStr);
+                hito.setEquipo(equipoStr);
+                hito.setHito(hitoStr);
+                ref.setValue(hito);
             }
         });
 
 
     }
-
 
 }
