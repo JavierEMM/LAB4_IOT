@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.lab4_iot.entity.Hito;
 import com.example.lab4_iot.entity.Jugador;
@@ -139,6 +140,11 @@ public class AdminActivity extends AppCompatActivity {
 
                 EditText editTextHito = findViewById(R.id.editTextHito);
                 String hitoStr = editTextHito.getText().toString();
+
+                if(hitoStr.isEmpty()){
+                    Toast.makeText(AdminActivity.this, "Hito no puede estar vacio", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 Hito hito = new Hito();
                 hito.setNombre(nombreStr);
