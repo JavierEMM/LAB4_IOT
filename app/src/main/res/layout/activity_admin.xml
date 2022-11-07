@@ -71,8 +71,8 @@
 
     <EditText
         android:id="@+id/editTextHito"
-        android:layout_width="152dp"
-        android:layout_height="27dp"
+        android:layout_width="161dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,7 +110,11 @@
         android:id="@+id/spinnerApellido"
         android:layout_width="148dp"
         android:layout_height="28dp"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="194dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

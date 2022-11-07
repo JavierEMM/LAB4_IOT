@@ -3,6 +3,7 @@ package com.example.lab4_iot;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -89,7 +90,10 @@ public class AdminActivity extends AppCompatActivity {
                 hito.setApellido(apellidoStr);
                 hito.setEquipo(equipoStr);
                 hito.setHitoTexto(hitoStr);
-                ref.setValue(hito);
+                ref.push().setValue(hito);
+
+                Intent intent = new Intent(AdminActivity.this,Activity_UserHitos.class);
+                startActivity(intent);
             }
         });
 
