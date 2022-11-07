@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivityUser">
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Password"
+        app:layout_constraintEnd_toEndOf="@+id/editEmail"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/editEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="@+id/titleBienv"
+        app:layout_constraintStart_toStartOf="@+id/titleBienv"
+        app:layout_constraintTop_toBottomOf="@+id/titleBienv" />
+
+    <Button
+        android:id="@+id/btnLogIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="LOG IN"
+        app:layout_constraintEnd_toEndOf="@+id/editPassword"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/editPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
+
+    <TextView
+        android:id="@+id/titleBienv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="BIENVENIDO A LAB4IOT"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogIN"
+        app:layout_constraintStart_toStartOf="@+id/btnLogIN"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogIN" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

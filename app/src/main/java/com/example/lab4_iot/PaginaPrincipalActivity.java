@@ -9,12 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.firebase.ui.auth.AuthMethodPickerLayout;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
 import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Arrays;
 
@@ -24,15 +26,17 @@ public class PaginaPrincipalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagina_principal);
+        //Inicializamos las variables
 
         ((Button) findViewById(R.id.btnLogAdmin)).setOnClickListener(view -> {
-            Intent signInIntent = AuthUI.getInstance()
-                    .createSignInIntentBuilder()
-                    .setAvailableProviders(Arrays.asList(
-                            new AuthUI.IdpConfig.EmailBuilder().build(),
-                            new AuthUI.IdpConfig.GoogleBuilder().build()
-                    )).setIsSmartLockEnabled(false).build();
-            signInLauncher.launch(signInIntent);
+            Intent intent =  new Intent(PaginaPrincipalActivity.this,LogInActivityUser.class);
+            intent.putExtra("ROL","ADMIN");
+            startActivity(intent);
+        });
+        ((Button) findViewById(R.id.btnLogUser)).setOnClickListener(view -> {
+            Intent intent =  new Intent(PaginaPrincipalActivity.this,LogInActivityUser.class);
+            intent.putExtra("ROL","USUARIO");
+            startActivity(intent);
         });
     }
     private final ActivityResultLauncher<Intent> signInLauncher= registerForActivityResult(
