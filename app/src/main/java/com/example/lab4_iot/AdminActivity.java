@@ -40,23 +40,8 @@ public class AdminActivity extends AppCompatActivity {
         Spinner spinnerEquipos = findViewById(R.id.spinnerEquipo);
         spinnerEquipos.setAdapter(adapter);
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Alianza Lima");
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Jugadores");
         databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot children : snapshot.getChildren() ){
-                    Jugador jugador = children.getValue(Jugador.class);
-                    listaNombres.add(jugador.getNombre());
-                    listaApellidos.add(jugador.getApellido());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {}
-        });
-
-        DatabaseReference databaseReference1 = firebaseDatabase.getReference().child("Universitario de Deportes");
-        databaseReference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot children : snapshot.getChildren() ){
