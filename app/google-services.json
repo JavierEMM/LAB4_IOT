@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "84578766913-a8lnjgqui4aquf5bq657j9nr37okktjd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab4_iot",
+            "certificate_hash": "a65e4b3e5ba3d9ea8592b6d58eaae36ebe4fc1ef"
+          }
+        },
+        {
           "client_id": "84578766913-hg20ofsi4eccs5u41dso7hc54u6arfc0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -28,6 +36,14 @@
           "android_info": {
             "package_name": "com.example.lab4_iot",
             "certificate_hash": "bf5f550fa05e7d2c0bf7bc2a3596d60385666621"
+          }
+        },
+        {
+          "client_id": "84578766913-t2dbuh3osahlp4eaflfcqkvpmt1uttla.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab4_iot",
+            "certificate_hash": "a635a3e81779f4739c82f4d52a5dd2bf4df13867"
           }
         },
         {
