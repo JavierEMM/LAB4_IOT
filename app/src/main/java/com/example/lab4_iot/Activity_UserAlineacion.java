@@ -22,8 +22,8 @@ public class Activity_UserAlineacion extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     ArrayList<TextView> listaPosiciones;
-    ArrayList<Jugador> listaEquipo1;
-    ArrayList<Jugador> listaEquipo2;
+    ArrayList<Jugador> listaEquipo1 = new ArrayList<>();
+    ArrayList<Jugador> listaEquipo2 = new ArrayList<>();
     String equipo1= "Alianza Lima";
     String equipo2 = "Universitario de Deportes";
     TextView textEquipo;
@@ -59,7 +59,10 @@ public class Activity_UserAlineacion extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {}
+            public void onCancelled(@NonNull DatabaseError error) {
+
+
+            }
         });
 
         DatabaseReference databaseReference1 = firebaseDatabase.getReference().child("Universitario de Deportes");
@@ -76,7 +79,7 @@ public class Activity_UserAlineacion extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {}
         });
 
-        for(int i=0; i<listaPosiciones.size(); i++){
+        for(int i=0; i<listaEquipo1.size(); i++){
             Jugador jugador = listaEquipo1.get(i);
             String nombre = jugador.getNombre() + " "+jugador.getApellido();
             listaPosiciones.get(i).setText(nombre);
@@ -104,7 +107,7 @@ public class Activity_UserAlineacion extends AppCompatActivity {
             listaEquipo = listaEquipo2;
             equipo=equipo2;
         }
-        for(int i=0; i<listaPosiciones.size(); i++){
+        for(int i=0; i<listaEquipo.size(); i++){
             Jugador jugador = listaEquipo.get(i);
             String nombre = jugador.getNombre() + " "+jugador.getApellido();
             listaPosiciones.get(i).setText(nombre);

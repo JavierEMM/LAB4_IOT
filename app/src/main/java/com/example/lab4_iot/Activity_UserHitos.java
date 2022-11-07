@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class Activity_UserHitos extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
-    ArrayList<Hito> listaHitos;
+    ArrayList<Hito> listaHitos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class Activity_UserHitos extends AppCompatActivity {
         ListaHitosAdapter adapter = new ListaHitosAdapter();
 
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Hitos");
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Alianza Lima");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
