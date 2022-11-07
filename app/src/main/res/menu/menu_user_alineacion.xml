@@ -4,7 +4,7 @@
     >
 <item
     android:id="@+id/menuButtonCambioEquipo"
-    android:icon="@drawable/ic_baseline_rotate_left_24"
+    android:icon="@mipmap/ic_change"
     android:title="Cambio"
     app:showAsAction="ifRoom"
     android:onClick="listarOtroEquipo"/>

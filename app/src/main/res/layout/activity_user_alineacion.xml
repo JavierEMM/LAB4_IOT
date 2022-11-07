@@ -9,6 +9,9 @@
     android:gravity="center">
 
     <TextView
+        android:background="@drawable/background1"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="20dp"
         android:id="@+id/textEquipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
