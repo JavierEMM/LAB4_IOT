@@ -72,7 +72,7 @@ public class Activity_UserAlineacion extends AppCompatActivity {
                     int last=0;
                     for(int i=0; i<listaEquipo.size(); i++){
                         Jugador jugadortemp = listaEquipo.get(i);
-                        String nombre = jugadortemp.getNombre() + " "+jugadortemp.getApellido();
+                        String nombre = jugadortemp.getNombre() + "\n"+jugadortemp.getApellido();
                         listaPosiciones.get(i).setText(nombre);
                         last=i;
                     }
@@ -95,7 +95,7 @@ public class Activity_UserAlineacion extends AppCompatActivity {
 
         for(int i=0; i<listaEquipo1.size(); i++){
             Jugador jugador = listaEquipo1.get(i);
-            String nombre = jugador.getNombre() + " "+jugador.getApellido();
+            String nombre = jugador.getNombre() + "\n"+jugador.getApellido();
             listaPosiciones.get(i).setText(nombre);
         }
         textEquipo.setText(equipo1);
@@ -124,7 +124,7 @@ public class Activity_UserAlineacion extends AppCompatActivity {
         }
         for(int i=0; i<listaEquipo.size(); i++){
             Jugador jugador = listaEquipo.get(i);
-            String nombre = jugador.getNombre() + " "+jugador.getApellido();
+            String nombre = jugador.getNombre() + "\n"+jugador.getApellido();
             listaPosiciones.get(i).setText(nombre);
         }
         textEquipo.setText(equipo);

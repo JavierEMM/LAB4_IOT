@@ -31,7 +31,7 @@
         >
 
         <LinearLayout
-            android:layout_width="62dp"
+            android:layout_width="78dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/background1"
@@ -63,7 +63,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
@@ -90,9 +90,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="8dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/background1"
                 android:gravity="center"
@@ -117,9 +117,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="8dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/background1"
                 android:gravity="center"
@@ -144,7 +144,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
@@ -180,7 +180,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
@@ -207,7 +207,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
@@ -234,7 +234,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
@@ -268,7 +268,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
@@ -295,7 +295,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
@@ -322,7 +322,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="62dp"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="10dp"
