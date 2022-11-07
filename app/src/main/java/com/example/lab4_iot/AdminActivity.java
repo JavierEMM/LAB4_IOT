@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AdminActivity extends AppCompatActivity {
 
@@ -47,16 +49,24 @@ public class AdminActivity extends AppCompatActivity {
                     Jugador jugador = children.getValue(Jugador.class);
                     listaNombres.add(jugador.getNombre());
                     listaApellidos.add(jugador.getApellido());
-
                     ArrayList<String> jugadores = listaNombres;
                     ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(AdminActivity.this, android.R.layout.simple_spinner_dropdown_item,jugadores);
                     Spinner spinnerNombre = findViewById(R.id.spinnerNombre);
                     spinnerNombre.setAdapter(adapter1);
+                    spinnerNombre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(AdminActivity.this, android.R.layout.simple_spinner_dropdown_item, Collections.singletonList(listaApellidos.get(i)));
+                            Spinner spinnerApellido = findViewById(R.id.spinnerApellido);
+                            spinnerApellido.setEnabled(false);
+                            spinnerApellido.setAdapter(adapter2);
+                        }
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
 
-                    ArrayList<String> apellidos = listaApellidos;
-                    ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(AdminActivity.this, android.R.layout.simple_spinner_dropdown_item,apellidos);
-                    Spinner spinnerApellido = findViewById(R.id.spinnerApellido);
-                    spinnerApellido.setAdapter(adapter2);
+                        }
+                    });
+
                 }
             }
 
