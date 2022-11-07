@@ -6,5 +6,6 @@
     android:id="@+id/menuButtonCambioEquipo"
     android:icon="@drawable/ic_baseline_rotate_left_24"
     android:title="Cambio"
-    app:showAsAction="ifRoom"/>
+    app:showAsAction="ifRoom"
+    android:onClick="listarOtroEquipo"/>
 </menu>

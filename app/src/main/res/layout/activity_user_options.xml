@@ -16,13 +16,15 @@
         android:text="Alineación"
         android:textSize="16sp"
         android:width="150dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:onClick="goAlineacion"/>
     <Button
         android:id="@+id/buttonHitos"
         android:textSize="16sp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="Hitos"/>
+        android:text="Hitos"
+        android:onClick="goHitos"/>
 
 </LinearLayout>

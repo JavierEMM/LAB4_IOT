@@ -14,10 +14,18 @@ import com.example.lab4_iot.entity.Hito;
 
 import java.util.ArrayList;
 
-public class listaHitosAdapter extends RecyclerView.Adapter<listaHitosAdapter.hitoViewHolder> {
+public class ListaHitosAdapter extends RecyclerView.Adapter<ListaHitosAdapter.hitoViewHolder> {
 
     private ArrayList<Hito> listaHitos;
     private Context context;
+
+    public void setContext(Context context){
+        this.context = context;
+    }
+
+    public void setListaHitos(ArrayList<Hito> listaHitos){
+        this.listaHitos = listaHitos;
+    }
 
     public class hitoViewHolder extends RecyclerView.ViewHolder {
         Hito hito;
