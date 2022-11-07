@@ -141,10 +141,7 @@ public class AdminActivity extends AppCompatActivity {
                 EditText editTextHito = findViewById(R.id.editTextHito);
                 String hitoStr = editTextHito.getText().toString();
 
-                if(hitoStr.isEmpty()){
-                    Toast.makeText(AdminActivity.this, "Hito no puede estar vacio", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+
 
                 Hito hito = new Hito();
                 hito.setNombre(nombreStr);
