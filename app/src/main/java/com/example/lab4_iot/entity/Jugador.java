@@ -3,6 +3,15 @@ package com.example.lab4_iot.entity;
 public class Jugador {
     private String nombre;
     private String apellido;
+    private String equipo;
+
+    public String getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(String equipo) {
+        this.equipo = equipo;
+    }
 
     public String getNombre() {
         return nombre;

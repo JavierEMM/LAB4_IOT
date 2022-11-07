@@ -49,7 +49,7 @@ public class ListaHitosAdapter extends RecyclerView.Adapter<ListaHitosAdapter.hi
         TextView textJugador =holder.itemView.findViewById(R.id.textJugador);
         TextView textHito = holder.itemView.findViewById(R.id.textHito);
         String sJugador = "Jugador: "+ h.getNombre()+" " +h.getApellido()+"\nEquipo: "+h.getEquipo();
-        String sHito = h.getHito();
+        String sHito = h.getHitoTexto();
 
         textJugador.setText(sJugador);
         textHito.setText(sHito);

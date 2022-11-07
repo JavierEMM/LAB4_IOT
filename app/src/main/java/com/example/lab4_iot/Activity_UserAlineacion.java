@@ -48,13 +48,39 @@ public class Activity_UserAlineacion extends AppCompatActivity {
                 findViewById(R.id.nombrePost10),
                 findViewById(R.id.nombrePost11)));
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Alianza Lima");
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Jugadores");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot children : snapshot.getChildren() ){
                     Jugador jugador = children.getValue(Jugador.class);
-                    listaEquipo1.add(jugador);
+                    if(jugador.getEquipo().equals(equipo1)){
+                        listaEquipo1.add(jugador);
+                    } else{
+                        listaEquipo2.add(jugador);
+                    }
+                    ArrayList<Jugador> listaEquipo;
+                    String equipo;
+
+                    if(estado==0){
+                        listaEquipo=listaEquipo1;
+                        equipo=equipo1;
+                    } else{
+                        listaEquipo = listaEquipo2;
+                        equipo=equipo2;
+                    }
+                    int last=0;
+                    for(int i=0; i<listaEquipo.size(); i++){
+                        Jugador jugadortemp = listaEquipo.get(i);
+                        String nombre = jugadortemp.getNombre() + " "+jugadortemp.getApellido();
+                        listaPosiciones.get(i).setText(nombre);
+                        last=i;
+                    }
+                    for(int i=last+1; i<listaPosiciones.size(); i++){
+                        String nombre = "Sin definir";
+                        listaPosiciones.get(i).setText(nombre);
+                    }
+                    textEquipo.setText(equipo);
                 }
             }
 
@@ -65,19 +91,7 @@ public class Activity_UserAlineacion extends AppCompatActivity {
             }
         });
 
-        DatabaseReference databaseReference1 = firebaseDatabase.getReference().child("Universitario de Deportes");
-        databaseReference1.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot children : snapshot.getChildren() ){
-                    Jugador jugador = children.getValue(Jugador.class);
-                    listaEquipo2.add(jugador);
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {}
-        });
 
         for(int i=0; i<listaEquipo1.size(); i++){
             Jugador jugador = listaEquipo1.get(i);
@@ -85,6 +99,7 @@ public class Activity_UserAlineacion extends AppCompatActivity {
             listaPosiciones.get(i).setText(nombre);
         }
         textEquipo.setText(equipo1);
+
 
 
     }

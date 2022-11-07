@@ -24,7 +24,8 @@
         android:background="@drawable/campo_futbol"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="40dp">
+        tools:layout_editor_absoluteY="40dp"
+        >
 
         <LinearLayout
             android:layout_width="62dp"
@@ -42,13 +43,14 @@
 
             <TextView
                 android:id="@+id/nombrePost1"
-                android:text="Sin definir"
+                android:text="Cargando..."
                 android:paddingHorizontal="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -74,13 +76,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost2"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -100,13 +103,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost3"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -126,13 +130,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost4"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -152,13 +157,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost5"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -187,13 +193,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost6"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -213,13 +220,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost7"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -239,13 +247,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost8"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -272,13 +281,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost9"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -298,13 +308,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost10"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
             <LinearLayout
@@ -324,13 +335,14 @@
 
                 <TextView
                     android:id="@+id/nombrePost11"
-                    android:text="Sin definir"
+                    android:text="Cargando"
                     android:paddingHorizontal="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
         </LinearLayout>

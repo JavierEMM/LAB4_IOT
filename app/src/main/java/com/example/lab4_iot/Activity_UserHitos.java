@@ -27,18 +27,29 @@ public class Activity_UserHitos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_hitos);
-
+        RecyclerView recyclerView = findViewById(R.id.recycleViewer);
 
         ListaHitosAdapter adapter = new ListaHitosAdapter();
+        adapter.setContext(Activity_UserHitos.this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Alianza Lima");
+
+
+
+
+
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Hitos");
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot children : snapshot.getChildren() ){
                     Hito hito = children.getValue(Hito.class);
                     listaHitos.add(hito);
+                    adapter.setListaHitos(listaHitos);
+                    recyclerView.setAdapter(adapter);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(Activity_UserHitos.this));
                 }
             }
 
@@ -47,11 +58,7 @@ public class Activity_UserHitos extends AppCompatActivity {
         });
 
 
-        adapter.setListaHitos(listaHitos);
-        adapter.setContext(Activity_UserHitos.this);
-        RecyclerView recyclerView = findViewById(R.id.recycleViewer);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(Activity_UserHitos.this));
+
 
     }
 }

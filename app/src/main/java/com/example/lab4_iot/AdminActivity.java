@@ -3,9 +3,7 @@ package com.example.lab4_iot;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,8 +23,8 @@ import java.util.ArrayList;
 public class AdminActivity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
-    ArrayList<String> listaNombres;
-    ArrayList<String> listaApellidos;
+    ArrayList<String> listaNombres = new ArrayList<>();
+    ArrayList<String> listaApellidos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +46,16 @@ public class AdminActivity extends AppCompatActivity {
                     Jugador jugador = children.getValue(Jugador.class);
                     listaNombres.add(jugador.getNombre());
                     listaApellidos.add(jugador.getApellido());
+
+                    ArrayList<String> jugadores = listaNombres;
+                    ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(AdminActivity.this, android.R.layout.simple_spinner_dropdown_item,jugadores);
+                    Spinner spinnerNombre = findViewById(R.id.spinnerNombre);
+                    spinnerNombre.setAdapter(adapter1);
+
+                    ArrayList<String> apellidos = listaApellidos;
+                    ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(AdminActivity.this, android.R.layout.simple_spinner_dropdown_item,apellidos);
+                    Spinner spinnerApellido = findViewById(R.id.spinnerApellido);
+                    spinnerApellido.setAdapter(adapter2);
                 }
             }
 
@@ -55,15 +63,7 @@ public class AdminActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {}
         });
 
-        ArrayList<String> jugadores = listaNombres;
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,jugadores);
-        Spinner spinnerNombre = findViewById(R.id.spinnerNombre);
-        spinnerNombre.setAdapter(adapter1);
 
-        ArrayList<String> apellidos = listaApellidos;
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,apellidos);
-        Spinner spinnerApellido = findViewById(R.id.spinnerApellido);
-        spinnerApellido.setAdapter(adapter2);
 
         Button button = findViewById(R.id.btnAdmin);
         button.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +73,7 @@ public class AdminActivity extends AppCompatActivity {
                 Spinner spinnerEquipo = findViewById(R.id.spinnerEquipo);
                 String equipoStr = spinnerEquipo.getSelectedItem().toString();
 
-                DatabaseReference ref = firebaseDatabase.getReference().child(equipoStr);
+                DatabaseReference ref = firebaseDatabase.getReference().child("Hitos");
 
                 Spinner spinnerNombre = findViewById(R.id.spinnerNombre);
                 String nombreStr = spinnerNombre.getSelectedItem().toString();
@@ -88,7 +88,7 @@ public class AdminActivity extends AppCompatActivity {
                 hito.setNombre(nombreStr);
                 hito.setApellido(apellidoStr);
                 hito.setEquipo(equipoStr);
-                hito.setHito(hitoStr);
+                hito.setHitoTexto(hitoStr);
                 ref.setValue(hito);
             }
         });

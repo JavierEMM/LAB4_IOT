@@ -15,16 +15,17 @@
 
     <TextView
         android:id="@+id/textHito"
-        android:layout_width="220dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:paddingVertical="8dp"
         android:text="Al minuto 13 del partido realizó un disparo al arco"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
 
     <View
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@android:color/darker_gray"
-        android:layout_alignBottom="@+id/textHito"/>
+        android:layout_below="@+id/textHito"/>
 
 </RelativeLayout>

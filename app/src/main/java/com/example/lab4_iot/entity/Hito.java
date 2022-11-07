@@ -4,7 +4,7 @@ public class Hito {
     private String equipo;
     private String nombre;
     private String apellido;
-    private String hito;
+    private String hitoTexto;
 
     public String getEquipo() {
         return equipo;
@@ -30,11 +30,11 @@ public class Hito {
         this.apellido = apellido;
     }
 
-    public String getHito() {
-        return hito;
+    public String getHitoTexto() {
+        return hitoTexto;
     }
 
-    public void setHito(String hito) {
-        this.hito = hito;
+    public void setHitoTexto(String hitoTexto) {
+        this.hitoTexto = hitoTexto;
     }
 }

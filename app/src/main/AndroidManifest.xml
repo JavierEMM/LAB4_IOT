@@ -24,6 +24,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:parentActivityName=".AdminActivity"
             android:name=".Activity_UserHitos"
             android:exported="false" >
             <meta-data
@@ -31,6 +32,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:parentActivityName=".AdminActivity"
             android:name=".Activity_UserAlineacion"
             android:exported="false" />
         <activity
